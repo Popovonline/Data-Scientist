@@ -1,0 +1,15 @@
+-- Создайте свою базу данных:
+>>> use PopovOnline
+
+-- Создайте коллекцию пользователей
+>>> db.createCollection ("users")
+
+-- Добавьте информацию по 2-ум людям с полями ФИО + контактная информация:
+>>> db.users.insert({name: "Mike", family: "Kotov", kontakt: {email:"kotov@mail.ru", tel: "+7 911 111 11 11"}})
+>>> db.users.insert({name: "Sergey", family: "Sergeev", kontakt: {email:"sergeev@mail.ru", tel: "+7 921 111 11 11"}})
+
+-- Запрос содержимого коллекции:
+>>> db.users.find()
+
+-- Запрос информации какие коллекции существуют в базе
+>>> show cillections
